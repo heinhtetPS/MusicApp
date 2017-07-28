@@ -1,1 +1,7 @@
-<h1>Welcome <%= @user.email %>!! </h1>
+<h1>Welcome <%= current_user.email  %> </h1>
+
+
+<form action="sessions_url" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" name="" value="Log Out">
+</form>

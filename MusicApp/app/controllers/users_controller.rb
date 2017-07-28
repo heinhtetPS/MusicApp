@@ -1,4 +1,4 @@
-class UsersController < ActionController::Base
+class UsersController < ApplicationController
 
   def new
     @user = User.new
@@ -6,6 +6,7 @@ class UsersController < ActionController::Base
   end
 
   def show
+    debugger
     render :show
   end
 
