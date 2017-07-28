@@ -1,0 +1,24 @@
+<form action=" <%= users_url %> " method="post">
+  <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= form_authenticity_token %>">
+  <h1>Register for MusicApp Here!</h1>
+
+  <label for="email_field">Email:</label>
+  <input id ="email_field"
+          type="text"
+          name="user[email]"
+          value="<%= @user.email %>">
+  <br>
+  <label for="pass_field">Password:</label>
+  <input id ="email_field"
+          type="text"
+          name="user[password]"
+          value="<%= @user.password %>">
+          <!-- DO NOT USE ERB IN NAME FIELD NEVER DO THIS -->
+  <br>
+
+  <input type="submit" name="" value="Register!">
+
+</form>
